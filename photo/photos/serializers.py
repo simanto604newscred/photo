@@ -24,4 +24,5 @@ class PhotosSerializer(Serializer):
     def create(self, validated_data):
         images = validated_data.get('images')
         books = [Photo(**item) for item in images]
+        # TODO django-bulk-create-return-objects-without-pk-except-Postgres
         return {'images': Photo.objects.bulk_create(books)}
