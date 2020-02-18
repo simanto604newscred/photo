@@ -104,7 +104,7 @@ venv.bak/
 .mypy_cache/
 
 .idea/
-kajkey_media/*
+photo_app/*
 */local_settings.py
 .env
 static/
