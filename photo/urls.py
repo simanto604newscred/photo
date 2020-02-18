@@ -22,9 +22,6 @@ from drf_yasg.views import get_schema_view
 from rest_framework.permissions import AllowAny
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-
-
-
 schema_view = get_schema_view(
    openapi.Info(
       title='Photos API',
@@ -47,9 +44,6 @@ token_patterns = [
 api_patterns = [
     path('token/', include((token_patterns, 'token'), namespace='token')),
 ]
-
-
-
 
 
 urlpatterns = [
