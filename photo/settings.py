@@ -39,10 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
+    # 3rd party apps
     'drf_yasg',
+    'django_filters',
+    'easy_thumbnails',
+    'rest_framework',
+    # projects apps
     'photo.users',
-    'django_filters'
+    'photo.photos'
+
 ]
 
 MIDDLEWARE = [
@@ -145,3 +150,13 @@ STATIC_ROOT = STATIC_DIR
 MEDIA_DIR = os.path.realpath(os.path.join(BASE_DIR, 'photo_app/'))
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (50, 50), 'crop': True},
+    },
+}
+
+
+APPEND_SLASH=False
